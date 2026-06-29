@@ -1,0 +1,5 @@
+plugged/
+.viminfo
+.netrwhist
+*.swp
+*.swo
