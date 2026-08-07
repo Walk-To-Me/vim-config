@@ -1,16 +1,24 @@
 # vim-config
 
-Vim/GVim 配置文件，适用于 Linux 内网机器间快速部署。
+精简的 Vim/GVim 配置文件，适用于 Linux 内网机器间快速部署。
+
+## 包含的插件
+
+- [NERDTree](https://github.com/preservim/nerdtree)：文件树（`Ctrl-n` 开关）
+- [vim-airline](https://github.com/vim-airline/vim-airline) 与 vim-airline-themes：状态栏与标签栏
+- [gruvbox](https://github.com/morhetz/gruvbox)：深色配色主题
 
 ## 安装
 
 ```bash
-git clone git@github.com:Walk-To-Me/vim-config.git
+git clone git@github.com:Walk-To-Me/vim-config.git ~/vim-config
 ln -sf ~/vim-config/vimrc ~/.vimrc
 ln -sf ~/vim-config/gvimrc ~/.gvimrc
 ln -sf ~/vim-config/vim ~/.vim
 vim +PlugInstall +qall
 ```
+
+`PlugInstall` 会将上述四个插件安装到 `~/.vim/plugged`。
 
 ## 外部依赖
 
@@ -18,14 +26,9 @@ vim +PlugInstall +qall
 
 | 工具 | 用途 |
 |------|------|
-| git | vim-fugitive、vim-gitgutter |
-| ctags | vim-gutentags 标签跳转 |
-| flake8, mypy | Python 代码检查 (ALE) |
-| black | Python 格式化 (ALE) |
-| verilator | Verilog/SystemVerilog 检查 (ALE) |
 | JetBrainsMono Nerd Font | GVim 字体 |
 
 ## 兼容要求
 
-- Vim >= 8.0，需 `+python3` 支持
+- Vim >= 8.0
 - 终端 Vim 无 X11 时，注释掉 `.vimrc` 中 `set clipboard=unnamedplus` 一行
